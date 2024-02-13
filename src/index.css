@@ -10,3 +10,8 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
 }
+
+#root {
+  width: 100vw;
+  overflow-x: hidden;
+}
