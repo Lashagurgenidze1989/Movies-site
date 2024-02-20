@@ -39,7 +39,7 @@ export default function Header() {
   ];
   return (
     <header
-      className={`bg-[#161D2F] px-4  py-5 flex justify-between items-center tablet:px-6 tablet:rounded-md tablet:px-6 tablet:py-6 desktop:flex-col desktop:h-[60rem] desktop:px-8 desktop:pt-9 desktop:justify-start`}
+      className={`bg-[#161D2F] px-4  py-5 flex justify-between items-center tablet:px-6 tablet:rounded-md tablet:px-6 tablet:py-6 desktop:flex-col desktop:h-100vh desktop:px-7 desktop:pt-9 desktop:justify-start`}
     >
       <img
         src={logo}
@@ -56,9 +56,9 @@ export default function Header() {
           </Link>
         ))}
       </ul>
-      <Link to={"/Login"}>
+      <Link className="desktop:w-[3.5rem]" to={"/Login"}>
         <img
-          className={`border-solid border-[1px] rounded-full border-white w-6 tablet:w-8 `}
+          className={` border-solid border-[1px] rounded-full border-white w-6 tablet:w-8 desktop:w-full`}
           src={avatar}
           alt="avatar"
         />

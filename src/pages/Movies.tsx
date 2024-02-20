@@ -12,7 +12,10 @@ export default function Movies({
   const mobile = useMediaQuery(`(max-width: 767px)`);
   const tablet = useMediaQuery(`(max-width: 1439px)`);
   return (
-    <section className={`mobile:pl-4 tablet:pl-0`}>
+    <section
+      style={mobile ? {} : tablet ? {} : { width: "calc(100vw - 13rem)" }}
+      className={`mobile:px-4 tablet:px-0`}
+    >
       {searchText ? (
         <>
           {" "}
@@ -44,7 +47,11 @@ export default function Movies({
                       >
                         {e.title}
                       </p>
-                      <div className="flex items-center justify-center bg-black opacity-35 rounded-full w-10 h-10 absolute top-[24px] left-3/4">
+                      <div
+                        className="flex items-center justify-center bg-black opacity-35 rounded-full w-10 h-10 absolute top-[10px] right-[10px] 
+                    tablet:top-[30px] tablet:right-[30px]
+                    desktop:top-[22px] desktop:right-[25px] "
+                      >
                         <img
                           className={`w-4 h-5`}
                           src={e.isBookmarked ? bookmarkFull : bookmarkEmpty}
@@ -86,7 +93,11 @@ export default function Movies({
                     >
                       {e.title}
                     </p>
-                    <div className="flex items-center justify-center bg-black opacity-35 rounded-full w-8 h-8 desktop:w-10 desktop:h-10 absolute top-[10px] right-[10px] desktop:top-[22px] desktop:right-[75px]">
+                    <div
+                      className="flex items-center justify-center bg-black opacity-35 rounded-full w-8 h-8 desktop:w-10 desktop:h-10 absolute top-[10px] right-[10px] 
+                    tablet:top-[30px] tablet:right-[30px]
+                    desktop:top-[22px] desktop:right-[25px]"
+                    >
                       {e.isBookmarked ? (
                         <svg
                           width="12"
@@ -107,7 +118,7 @@ export default function Movies({
                           <path
                             d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z"
                             stroke="#FFF"
-                            stroke-width="1.5"
+                            strokeWidth="1.5"
                             fill=""
                           />
                         </svg>

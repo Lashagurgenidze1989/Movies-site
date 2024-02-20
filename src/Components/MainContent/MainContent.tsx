@@ -28,14 +28,12 @@ export default function MainContent({ movies }: { movies: Movie[] }) {
       filteredMovies = null;
   }
 
-  /* search logic */
   const [searchText, setSearchText] = useState("");
-  /* const [searchContent, setSearchContent] = useState(); */
 
   return (
     <div className="desktop:flex desktop:gap-9">
       <Header />
-      <div>
+      <div className="">
         <SearchComponent
           setSearchText={setSearchText}
           searchText={searchText}
