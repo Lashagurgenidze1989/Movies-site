@@ -7,7 +7,7 @@ import SignUp from "./pages/SignUp";
 
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [movies, setMovies] = useState<Movie[]>(data);
+  const [movies] = useState<Movie[]>(data);
   const navigate = useNavigate();
 
   useEffect(() => {
